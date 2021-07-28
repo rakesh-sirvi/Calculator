@@ -1,5 +1,5 @@
 .layout {
-  position: relative;
+  position: absolute;
   width: auto;
   height: 650px;
   display: grid;
