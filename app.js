@@ -29,6 +29,10 @@ clear.addEventListener('click', () => {
 });
 
 compute.addEventListener('click', () => {
-  prev.innerText = curr.innerText;
-  curr.innerText = eval(curr.innerText);
+  try{
+    prev.innerText = curr.innerText;
+    curr.innerText = eval(curr.innerText);
+  }catch(err){
+    prev.innerText = 'Invalid expression'
+  }
 });
