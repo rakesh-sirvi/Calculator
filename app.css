@@ -1,6 +1,6 @@
 .layout {
-  position: absolute;
-  width: 50vw;
+  position: relative;
+  width: auto;
   height: 650px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
