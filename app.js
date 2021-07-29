@@ -30,7 +30,7 @@ clear.addEventListener('click', () => {
 
 compute.addEventListener('click', () => {
   try{
-    prev.innerText = curr.innerText;
+    prev.innerText = curr.innerText + " = ";
     curr.innerText = parseFloat(eval(curr.innerText.replace(/^0+/, '')),10);
   }catch(err){
     prev.innerText = 'Invalid expression'
