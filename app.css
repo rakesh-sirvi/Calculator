@@ -1,11 +1,10 @@
 .layout {
   position: absolute;
-  width: 100%;
-  max-width: 500px;
+  width: 500px;
   height: 650px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 150px repeat(5, 1fr);
+  grid-template-rows: 180px repeat(5, 1fr);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -20,6 +19,9 @@
   color: aliceblue;
   text-align: end;
   padding: 10px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .btn {
@@ -51,12 +53,13 @@
 }
 
 #prev {
-  height: 60%;
+  height: 50%;
   font-size: 2rem;
-  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 #curr {
-  height: 40%;
-  font-size: 2.5rem;
+  height: 50%;
+  font-size: 2rem;
+  font-weight: bold;
 }
