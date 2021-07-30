@@ -31,8 +31,12 @@ clear.addEventListener('click', () => {
 compute.addEventListener('click', () => {
   try{
     prev.innerText = curr.innerText + " = ";
-    let val = curr.innerText.replace(/[^\d\.\-\+\*\/\(\)\e]/g, '').replace(/^0+/, '').replace(/[^\d\.]+0+/g,(s)=>s.substr(0, 1));
-    curr.innerText = eval(val.length==0?0:val);
+    let res = Number(eval(curr.innerText.replace(/[^\d\.\-\+\*\/\(\)\e]/g, '').replace(/^0+/, '').replace(/[^\d\.]+0+/g,(s)=>s.substr(0, 1))));
+    if (res == 0 || !isFinite(res)){
+    curr.innerText = "0";
+    }else{
+      curr.innerText = res;
+    }
   }catch(err){
     prev.innerText = 'Invalid expression'
   }
